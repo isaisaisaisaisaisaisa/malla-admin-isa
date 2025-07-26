@@ -1,1 +1,161 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff0f5;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #ffe4ec;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: #c71585;
+  margin-bottom: 0.5rem;
+}
+
+.motivacion {
+  font-size: 1.1rem;
+  color: #d87093;
+}
+
+.progreso-container {
+  width: 80%;
+  height: 20px;
+  background-color: #fce4ec;
+  border-radius: 10px;
+  margin: 1rem auto;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.progreso-barra {
+  height: 100%;
+  background-color: #f48fb1;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.porcentaje {
+  text-align: center;
+  color: #c71585;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.semestre {
+  background-color: #fff;
+  border: 2px solid #ffc0cb;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.semestre:hover {
+  transform: translateY(-3px);
+}
+
+.semestre h2 {
+  text-align: center;
+  color: #db7093;
+  margin-bottom: 1rem;
+}
+
+.asignatura {
+  background-color: #fffafc;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 10px;
+  border: 1px solid #f8c3d6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.asignatura:hover {
+  background-color: #ffe6f0;
+}
+
+.asignatura.aprobada {
+  background-color: #d8bfd8;
+  text-decoration: line-through;
+  color: #666;
+}
+
+.asignatura.bloqueada {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#felicitacionFinal {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  background-color: #ffe0f0;
+  border: 2px dashed #d36c9e;
+  border-radius: 12px;
+  color: #c2185b;
+  animation: aparecer 2s ease forwards;
+}
+
+.oculto {
+  display: none;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#descargarDiploma {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #f8bbd0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#descargarDiploma:hover {
+  background-color: #ec407a;
+}
+
+#confetiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+@media (max-width: 600px) {
+  #malla {
+    grid-template-columns: 1fr;
+  }
+}
 
