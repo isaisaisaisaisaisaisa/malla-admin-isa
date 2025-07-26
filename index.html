@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Malla Curricular Administración de Empresas</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
   <header>
     <h1>🌸 Malla Curricular Administración de Empresas 🌸</h1>
-    <p class="motivacion" id="mensajeMotivacional">¡Cada paso te acerca a la meta! ✨</p>
+    <p class="motivacion" id="mensajeMotivacional">¡Cada paso te acerca a tu meta! ✨</p>
+    <div class="progreso-container">
+      <div class="progreso-barra" id="barraProgreso"></div>
+    </div>
+    <p class="porcentaje" id="porcentajeTexto">0% completado</p>
   </header>
+
   <main id="malla"></main>
+
+  <div id="felicitacionFinal" class="oculto">
+    🎓 ¡Lo lograste! ¡Todas las materias están aprobadas! 💗 Estoy orgullosa de ti 💫
+    <br /><br />
+    <button id="descargarDiploma">Descargar Diploma 🏅</button>
+    <canvas id="confetiCanvas"></canvas>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
-
